@@ -159,4 +159,26 @@ test= fltr_athletes(aa, "elite", 99)
 print(test)
 
 test_9=io_dump_into_txt('/Users/jams/Downloads/jaziya.txt', aa, 10)
+#10 
+# IO : paint an stack
+def io_draw_stack(N):
+    for row in range ((N+1) // 2):
+        spaces= (N-1) // 2-row
+        stars= 2 * row + 1
+        print(" " * spaces + "*" * stars)
+        
 
+aa = io_ld_athletes("athletes_100.csv")
+
+io_audit(aa)
+
+print("Heaviest athlete:", heaviest_athlete(aa).name)
+
+test= fltr_athletes(aa, "elite", 99)
+print(test)
+
+test_9=io_dump_into_txt('/Users/jams/Downloads/jaziya.txt', aa, 10)
+
+io_draw_stack(9)
+io_draw_stack(7)
+io_draw_stack(5)
